@@ -1,0 +1,1758 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8fb;
+    color: #333;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #f4b6dc;
+    padding: 15px 0;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    font-weight: bold;
+}
+
+/* KONTEN */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.dashboard-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* KARTU RINGKASAN */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #f8d9ec;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.summary-card p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.summary-card .status {
+    color: green;
+}
+
+/* MANAJEMEN */
+
+.management {
+    margin-top: 35px;
+}
+
+.management h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.management-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.management-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #f8d9ec;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.management-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.management-card p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d96ba8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #bd4d8c;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .management-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   HALAMAN KELOLA PRODUK
+========================= */
+
+.produk-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff9f6;
+    color: #49352f;
+}
+
+/* NAVBAR */
+
+.produk-page .navbar {
+    background: #f3c6d8;
+    padding: 18px 0;
+}
+
+.produk-page .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produk-page .navbar a {
+    color: #49352f;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 16px;
+}
+
+.produk-page .navbar a:hover {
+    color: #a34f70;
+}
+
+/* KONTEN UTAMA */
+
+.produk-page .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.produk-page h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #49352f;
+}
+
+/* TOMBOL */
+
+.produk-page .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #b96886;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.produk-page .btn:hover {
+    background: #98516d;
+}
+
+/* TOMBOL TAMBAH PRODUK */
+
+.produk-page a[href*="tambah"] {
+    margin-bottom: 25px;
+}
+
+/* FORM PENCARIAN */
+
+.produk-page form {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.produk-page form input,
+.produk-page form select {
+    padding: 10px;
+    border: 1px solid #d8c4c0;
+    border-radius: 5px;
+    background: white;
+    color: #49352f;
+    font-size: 14px;
+}
+
+.produk-page form input:focus,
+.produk-page form select:focus {
+    outline: none;
+    border-color: #b96886;
+}
+
+/* TABEL PRODUK */
+
+.produk-page table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(73, 53, 47, 0.08);
+}
+
+.produk-page th {
+    background: #f3c6d8;
+    color: #49352f;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ead5dc;
+}
+
+.produk-page td {
+    padding: 12px 15px;
+    border: 1px solid #eee3e1;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.produk-page tbody tr:nth-child(even) {
+    background: #fff8fa;
+}
+
+.produk-page tbody tr:hover {
+    background: #fff0f5;
+}
+
+/* GAMBAR PRODUK */
+
+.produk-page table img {
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* TOMBOL AKSI */
+
+.produk-page td .btn {
+    margin: 3px;
+    padding: 8px 15px;
+}
+
+.produk-page .btn-danger {
+    background: #b85c5c;
+}
+
+.produk-page .btn-danger:hover {
+    background: #963f3f;
+}
+
+/* PAGINATION */
+
+.produk-page .pagination {
+    margin-top: 20px;
+}
+
+.produk-page .pagination a {
+    display: inline-block;
+    padding: 8px 13px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background: #f3c6d8;
+    color: #49352f;
+    text-decoration: none;
+}
+
+.produk-page .pagination a:hover {
+    background: #b96886;
+    color: white;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 768px) {
+    .produk-page .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .produk-page .navbar a {
+        margin-right: 12px;
+    }
+
+    .produk-page .container {
+        width: 94%;
+    }
+
+    .produk-page h1 {
+        font-size: 26px;
+    }
+
+    .produk-page table {
+        min-width: 700px;
+    }
+
+    .produk-page .container {
+        overflow-x: auto;
+    }
+}
+
+/* HEADER KELOLA PRODUK */
+
+.produk-header {
+    background-color: #f3b6dc;
+    width: 100%;
+    padding: 16px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.produk-header h2 {
+    color: #333;
+    font-size: 28px;
+    margin: 0 0 16px;
+}
+
+.produk-header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produk-header nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.produk-header nav a:hover,
+.produk-header nav a.active {
+    font-weight: bold;
+}
+
+/* HEADER DI HP */
+
+@media (max-width: 600px) {
+    .produk-header h2 {
+        font-size: 24px;
+    }
+
+    .produk-header nav {
+        gap: 15px;
+    }
+
+    .produk-header nav a {
+        font-size: 15px;
+    }
+}
+
+/* HALAMAN EDIT PRODUK */
+
+.edit-product-page {
+    background: #fff8fb;
+    color: #49352f;
+    font-family: Arial, sans-serif;
+}
+
+/* KONTEN UTAMA */
+
+.edit-product-page .container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.edit-product-page h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #49352f;
+}
+
+/* FORM EDIT */
+
+.edit-product-page form {
+    background: white;
+    padding: 30px;
+    border: 1px solid #f3d5e2;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(73, 53, 47, 0.06);
+}
+
+/* LABEL */
+
+.edit-product-page form label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #49352f;
+}
+
+/* INPUT DAN SELECT */
+
+.edit-product-page form input[type="text"],
+.edit-product-page form input[type="number"],
+.edit-product-page form input[type="file"],
+.edit-product-page form select,
+.edit-product-page form textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 0 0 20px;
+    border: 1px solid #d9c5ce;
+    border-radius: 6px;
+    background: #fff;
+    color: #49352f;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.edit-product-page form input:focus,
+.edit-product-page form select:focus,
+.edit-product-page form textarea:focus {
+    outline: none;
+    border-color: #c76598;
+    box-shadow: 0 0 4px rgba(199, 101, 152, 0.3);
+}
+
+/* DESKRIPSI */
+
+.edit-product-page form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* GAMBAR SAAT INI */
+
+.edit-product-page form img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0 25px;
+}
+
+/* TOMBOL */
+
+.edit-product-page .btn {
+    display: inline-block;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #bd648e;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit-product-page .btn:hover {
+    background: #a94e78;
+}
+
+/* TOMBOL KEMBALI */
+
+.edit-product-page .btn-secondary {
+    background: #8b777d;
+}
+
+.edit-product-page .btn-secondary:hover {
+    background: #6f5c62;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+    .edit-product-page .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .edit-product-page h1 {
+        font-size: 26px;
+    }
+
+    .edit-product-page form {
+        padding: 20px;
+    }
+
+    .edit-product-page form img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ==========================
+   HALAMAN UTAMA SWEET CAKE
+========================== */
+
+.home-page {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #49352f;
+    background: #fff9f7;
+}
+
+/* HEADER */
+
+.home-header {
+    background: #f3b6d5;
+    padding: 18px 0;
+}
+
+.home-header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #49352f;
+    text-decoration: none;
+}
+
+.home-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.home-nav a {
+    color: #49352f;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.home-nav a:hover,
+.home-nav a.active {
+    color: #963e68;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero-section {
+    background: #fff1f6;
+    padding: 65px 0;
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+.hero-label {
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin: 18px 0;
+    color: #49352f;
+}
+
+.hero-text h1 span {
+    color: #b45b83;
+}
+
+.hero-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #76645f;
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background: #bd648e;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.home-button:hover {
+    background: #9f4e75;
+}
+
+
+/* PRODUK */
+
+.product-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 65px auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading span {
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #49352f;
+}
+
+.section-heading p {
+    color: #76645f;
+    font-size: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #f1dce4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(73, 53, 47, 0.06);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    background: #f9eaf0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #927c84;
+    font-size: 14px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #b45b83;
+    font-size: 13px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a34f70;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #76645f;
+    line-height: 1.6;
+}
+
+.empty-product {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* TENTANG KAMI */
+
+.about-section {
+    background: #fff1f6;
+    padding: 60px 0;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-text span {
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    font-size: 30px;
+    margin: 12px 0 20px;
+}
+
+.about-text p {
+    color: #76645f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.home-footer {
+    background: #49352f;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.home-footer h2 {
+    margin: 0 0 10px;
+}
+
+.home-footer p {
+    font-size: 14px;
+}
+
+.home-footer .copyright {
+    margin-top: 20px;
+    color: #e7cbd5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .home-header-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .home-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+}
+
+/* ==========================
+   HALAMAN LOGIN ADMIN
+========================== */
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff8fb;
+    font-family: Arial, sans-serif;
+    color: #49352f;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 560px;
+}
+
+.login-card {
+    width: 100%;
+    padding: 35px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #f1dce4;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(73, 53, 47, 0.08);
+}
+
+.login-card h1 {
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 32px;
+    color: #49352f;
+}
+
+.login-card > p {
+    margin: 0 0 28px;
+    text-align: center;
+    font-size: 16px;
+    color: #76645f;
+}
+
+/* PESAN ERROR */
+
+.login-alert {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #fce4e4;
+    color: #a12b2b;
+    font-size: 14px;
+}
+
+/* LABEL */
+
+.login-card form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #49352f;
+}
+
+/* INPUT */
+
+.login-input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-input-wrapper input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 45px 10px 12px;
+    box-sizing: border-box;
+    border: 1px solid #d9c5ce;
+    border-radius: 6px;
+    background: #fff;
+    color: #49352f;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.login-input-wrapper input:focus {
+    outline: none;
+    border-color: #bd648e;
+    box-shadow: 0 0 4px rgba(189, 100, 142, 0.3);
+}
+
+/* TOMBOL HAPUS USERNAME */
+
+.clear-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #927c84;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    color: #49352f;
+}
+
+/* TOMBOL PASSWORD */
+
+.password-button {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    padding: 4px;
+    border: none;
+    background: transparent;
+    color: #927c84;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.password-button:hover {
+    color: #bd648e;
+}
+
+/* TOMBOL LOGIN */
+
+.login-submit {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-submit .btn {
+    display: inline-block;
+    min-width: 115px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #bd648e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-submit .btn:hover {
+    background: #a94e78;
+}
+
+/* KEMBALI KE WEBSITE */
+
+.back-to-website {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back-to-website a {
+    color: #a34f70;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-to-website a:hover {
+    text-decoration: underline;
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 27px;
+    }
+
+    .login-card > p {
+        font-size: 14px;
+    }
+}
+
+/* KONTAK TENTANG KAMI */
+
+.about-contact {
+    margin-top: 35px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #f1dce4;
+    border-radius: 10px;
+}
+
+.about-contact h2 {
+    color: #49352f;
+    margin-top: 0;
+}
+
+.about-contact p {
+    color: #76645f;
+    line-height: 1.8;
+}
+
+/* ==========================
+   HALAMAN TENTANG KAMI
+========================== */
+/* HALAMAN TENTANG KAMI */
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 8%;
+    background: #fff1f6;
+    text-align: center;
+}
+
+.about-hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-label {
+    display: inline-block;
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-hero h1 {
+    color: #49352f;
+    font-size: 42px;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+}
+
+.about-hero h1 span {
+    color: #b45b83;
+}
+
+.about-hero p {
+    color: #76645f;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #bd648e;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.about-button:hover {
+    background: #9f4e75;
+    transform: translateY(-3px);
+}
+
+}
+
+
+/* JUDUL BAGIAN */
+
+.about-section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.about-section-heading span {
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-section-heading h2 {
+    color: #49352f;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.about-section-heading p {
+    color: #76645f;
+    font-size: 15px;
+}
+
+
+/* KEUNGGULAN */
+
+.about-features {
+    padding: 65px 8%;
+    background: #fff9f7;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #f1dce4;
+    border-radius: 12px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(73, 53, 47, 0.05);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(73, 53, 47, 0.12);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff1f6;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.feature-card h3 {
+    color: #49352f;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #76645f;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* CERITA SWEET CAKE */
+
+.about-story {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 8%;
+    background: #fff1f6;
+}
+
+/* CERITA SWEET CAKE */
+
+.about-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 8%;
+    background: #fff1f6;
+    text-align: center;
+}
+
+.story-content {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.story-content h2 {
+    color: #49352f;
+    font-size: 30px;
+    margin: 8px 0 20px;
+}
+
+.story-content p {
+    color: #76645f;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #f1dce4;
+    border-radius: 9px;
+    margin-bottom: 14px;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(73, 53, 47, 0.04);
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #bd648e;
+}
+
+.faq-item summary {
+    color: #49352f;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 25px 20px 0;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 15px;
+    color: #b45b83;
+    font-size: 24px;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    color: #76645f;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 0 18px;
+    margin: 0;
+}
+
+
+/* KONTAK */
+
+.about-contact-section {
+    padding: 65px 8%;
+    background: #fff1f6;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact-content h2 {
+    color: #49352f;
+    font-size: 30px;
+    margin: 10px 0 15px;
+}
+
+.contact-content p {
+    color: #76645f;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #bd648e;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #9f4e75;
+    transform: translateY(-3px);
+}
+
+.contact-instagram {
+    background: #49352f;
+}
+
+.contact-instagram:hover {
+    background: #30221e;
+}
+
+.contact-content small {
+    display: block;
+    color: #927c84;
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+
+/* RESPONSIVE TENTANG KAMI */
+
+@media (max-width: 768px) {
+    .about-hero,
+    .about-story {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-hero p {
+        margin-left: auto;
+        margin-right: auto;
+/* RESPONSIVE TENTANG KAMI */
+
+@media (max-width: 768px) {
+    .about-hero,
+    .about-story {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 32px;
+    }
+
+    .about-hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section-heading h2,
+    .story-content h2,
+    .contact-content h2 {
+        font-size: 25px;
+    }
+
+    .about-features,
+    .about-faq,
+    .about-contact-section {
+        padding: 50px 6%;
+    }
+}
+    }
+
+/* PERAPIAN BAGIAN FAQ - TENTANG KAMI */
+
+.about-faq {
+    padding: 70px 8%;
+    background: #fff9f7;
+    box-sizing: border-box;
+}
+
+.about-faq .about-section-heading {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 35px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.about-faq .about-section-heading span {
+    display: inline-block;
+    color: #b45b83;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-faq .about-section-heading h2 {
+    color: #49352f;
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+}
+
+.about-faq .about-section-heading p {
+    color: #76645f;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-faq .faq-list {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about-faq .faq-item {
+    box-sizing: border-box;
+}
+
+/* ==========================
+   KARTU PRODUK DAPAT DIKLIK
+========================== */
+
+.product-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-card-link:hover,
+.product-card-link:focus,
+.product-card-link:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-card-link .product-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card-link:hover .product-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(73, 53, 47, 0.12);
+}
+
+/* ==========================
+   HALAMAN DETAIL PRODUK
+========================== */
+
+.detail-navbar {
+    background: #f3b6d5;
+    padding: 18px 0;
+}
+
+.detail-navbar-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail-logo {
+    color: #49352f;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.detail-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.detail-nav a {
+    color: #49352f;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.detail-nav a:hover {
+    color: #b45b83;
+}
+
+.detail-section {
+    min-height: 75vh;
+    padding: 70px 6%;
+    background: #fff5f8;
+    box-sizing: border-box;
+}
+
+.detail-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.detail-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(73, 53, 47, 0.08);
+}
+
+.detail-image {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff1f6;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.detail-no-image {
+    color: #76645f;
+    font-size: 15px;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-category {
+    display: inline-block;
+    color: #b45b83;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.detail-info h1 {
+    color: #49352f;
+    font-size: 36px;
+    line-height: 1.3;
+    margin: 0 0 15px;
+}
+
+.detail-price {
+    color: #b45b83;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detail-divider {
+    width: 100%;
+    height: 1px;
+    background: #f0dce4;
+    margin: 20px 0;
+}
+
+.detail-info h3 {
+    color: #49352f;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.detail-description {
+    color: #76645f;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 20px;
+}
+
+.detail-stock {
+    color: #49352f;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.stock-available {
+    color: #6d9871;
+    margin-left: 5px;
+}
+
+.stock-empty {
+    color: #c45c6d;
+    margin-left: 5px;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.detail-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.detail-button.primary {
+    background: #bd648e;
+    color: white;
+}
+
+.detail-button.primary:hover {
+    background: #a94f79;
+}
+
+.detail-button.secondary {
+    background: #f4dce7;
+    color: #49352f;
+}
+
+.detail-button.secondary:hover {
+    background: #ebc6d7;
+}
+
+@media (max-width: 768px) {
+    .detail-navbar-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .detail-nav {
+        gap: 18px;
+    }
+
+    .detail-section {
+        padding: 45px 6%;
+    }
+
+    .detail-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .detail-image {
+        min-height: 300px;
+    }
+
+    .detail-image img {
+        height: 300px;
+    }
+
+    .detail-info h1 {
+        font-size: 28px;
+    }
+
+    .detail-price {
+        font-size: 22px;
+    }
+
+    .detail-actions {
+        flex-direction: column;
+    }
+
+    .detail-button {
+        text-align: center;
+    }
+}
